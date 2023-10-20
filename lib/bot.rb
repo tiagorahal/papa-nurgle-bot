@@ -1,5 +1,5 @@
 require 'telegram/bot'
-require_relative 'motivate.rb'
+# require_relative 'motivate.rb'
 require_relative 'nurgle.rb'
 
 
@@ -12,11 +12,16 @@ class Bot
       case message.text
       when '/start'
 
-        bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name} , welcome to Papa Nurgle chat bot created by Tiago. Use  /start to start the bot,  /stop to end the bot, /nurgle to get the blessing.")
+        bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name} , welcome to Papa Nurgle chat bot created by Tiago. Use  /start to start the bot,  /stop to end the bot, /motivate to get a diffrent motivational quote everytime you request for it.")
 
       when '/stop'
 
-        bot.api.send_message(chat_id: message.chat.id, text: "Papa Nurgle bless upon you, #{message.from.first_name}", date: message.date)
+        bot.api.send_message(chat_id: message.chat.id, text: "Bye, #{message.from.first_name}", date: message.date)
+        
+      # when '/motivate'
+      #   values = Motivate.new
+      #   value = values.select_random
+      #   bot.api.send_message(chat_id: message.chat.id, text: "#{value['text']}", date: message.date)
 
       when  '/nurgle'
       nurgle = Nurgle.new

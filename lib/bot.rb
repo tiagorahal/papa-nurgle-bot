@@ -1,5 +1,6 @@
 require 'telegram/bot'
 require_relative 'greeting.rb'
+require_relative 'trivia.rb'
 
 
 class Bot
@@ -11,7 +12,7 @@ class Bot
       case message.text
       when '/start'
 
-        bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name} , welcome to Papa Nurgle chat bot created by Tiago. Use  /start to start the bot,  /stop to end the bot, /motivate to get a diffrent motivational quote everytime you request for it.")
+        bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name} , welcome to Papa Nurgle chat bot created by Tiago. Use  /start to start the bot,  /stop to end the bot, /hello to get a greeting from Nurgle, /trivia to know a random fact about Papa Nurgle.")
 
       when '/stop'
 
@@ -21,8 +22,14 @@ class Bot
       greeting = Greeting.new
       value = greeting.select_random
       bot.api.send_message(chat_id: message.chat.id, text: "#{value['text']}", date: message.date)
+
+      when  '/trivia'
+      trivia = Trivia.new
+      value = trivia.select_random
+      bot.api.send_message(chat_id: message.chat.id, text: "#{value['text']}", date: message.date)
+
       else
-        bot.api.send_message(chat_id: message.chat.id, text: "Invalid entry, #{message.from.first_name}, you need to use  /start,  /stop , /motivate or /joke")
+        bot.api.send_message(chat_id: message.chat.id, text: "Invalid entry, #{message.from.first_name}, you need to use  /start,  /stop , /hello, /trivia")
       end
     end
   end

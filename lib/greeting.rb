@@ -1,8 +1,8 @@
 require 'json'
 
-class Nurgle
+class Greeting
   def initialize
-    file = File.read(File.join(__dir__, 'nurgle.json'))
+    file = File.read(File.join(__dir__, 'greetings.json'))
     @data = JSON.parse(file)
   end
   def select_random

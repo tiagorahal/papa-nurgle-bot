@@ -1,6 +1,5 @@
 require 'telegram/bot'
-# require_relative 'motivate.rb'
-require_relative 'nurgle.rb'
+require_relative 'greeting.rb'
 
 
 class Bot
@@ -18,15 +17,10 @@ class Bot
 
         bot.api.send_message(chat_id: message.chat.id, text: "Bye, #{message.from.first_name}", date: message.date)
         
-      # when '/motivate'
-      #   values = Motivate.new
-      #   value = values.select_random
-      #   bot.api.send_message(chat_id: message.chat.id, text: "#{value['text']}", date: message.date)
-
-      when  '/nurgle'
-      nurgle = Nurgle.new
-      value = nurgle.select_random
-      bot.api.send_message(chat_id: message.chat.id, text: "\"#{value['text']}\" - #{value['author']}", date: message.date)
+      when  '/hello'
+      greeting = Greeting.new
+      value = greeting.select_random
+      bot.api.send_message(chat_id: message.chat.id, text: "#{value['text']}", date: message.date)
       else
         bot.api.send_message(chat_id: message.chat.id, text: "Invalid entry, #{message.from.first_name}, you need to use  /start,  /stop , /motivate or /joke")
       end

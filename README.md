@@ -1,6 +1,6 @@
 # Nurgle-Themed Telegram Bot
 
-![Nurgle Telegram Bot](nurgle_bot.jpg)
+![Nurgle Telegram Bot](screenshot.png)
 
 ## Introduction
 
@@ -11,8 +11,6 @@ Welcome to the Nurgle-Themed Telegram Bot, a fun project built using Ruby. This 
 - 🤢 Nurgle Greetings: The bot can greet users with infectious Nurgle-themed messages.
 
 - 💀 Nurgle Trivia: Get interesting facts and trivia about the Nurgle faction.
-
-- 📷 Nurgle Images: Request Nurgle-themed images and illustrations.
 
 - 🤖 Custom Commands: Add your own commands to extend the bot's functionality.
 
@@ -37,13 +35,13 @@ gem install net-http-persistent -v '2.9.4'
 1. Clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/nurgle-telegram-bot.git
+git clone https://github.com/yourusername/papa-nurgle-bot.git
 ```
 
 2. Navigate to the project folder:
 
 ```bash
-cd nurgle-telegram-bot
+cd papa-nurgle-bot
 ```
 
 3. Start the bot by running the main script:
@@ -83,6 +81,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-If you have any questions or suggestions, feel free to contact the bot creator at `your@email.com`.
+If you have any questions or suggestions, feel free to contact the bot creator at `rahal.aires@gmail.com`.
 
-Enjoy your Nurgle-themed Telegram Bot! 🤢💀📷
+Enjoy your Nurgle-themed Telegram Bot! 🤢💀

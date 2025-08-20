@@ -1,86 +1,238 @@
-# Nurgle-Themed Telegram Bot
+# 🦠 Papa Nurgle's Telegram Bot v2.0
 
-![Nurgle Telegram Bot](screenshot.png)
+![Nurgle Banner](https://img.shields.io/badge/Nurgle-Bot-green?style=for-the-badge&logo=telegram)
+![Ruby](https://img.shields.io/badge/Ruby-3.0+-red?style=for-the-badge&logo=ruby)
+![Status](https://img.shields.io/badge/Status-Infectando-yellowgreen?style=for-the-badge)
 
-## Introduction
+## 🎭 Sobre o Bot
 
-Welcome to the Nurgle-Themed Telegram Bot, a fun project built using Ruby. This bot is inspired by the Nurgle faction from the Warhammer 40k universe and is designed to provide users with a variety of Nurgle-themed interactions and information.
+Bot temático de Nurgle para Telegram, inspirado no universo Warhammer 40k. Este bot oferece uma experiência interativa e gamificada com sistema de infecção, níveis, conquistas e muito mais!
 
-## Features
+## ✨ Novidades da v2.0
 
-- 🤢 Nurgle Greetings: The bot can greet users with infectious Nurgle-themed messages.
+### 🎮 Sistema de Gamificação
+- **Sistema de Infecção**: Ganhe pontos de infecção e suba de nível
+- **15 Níveis Únicos**: De "Não Infectado" até "Encarnação da Entropia"
+- **Conquistas**: Desbloqueie realizações especiais
+- **Rankings**: Compare sua devoção com outros seguidores
+- **Bênçãos Diárias**: Receba bônus especiais a cada 24h
 
-- 💀 Nurgle Trivia: Get interesting facts and trivia about the Nurgle faction.
+### 🤖 Recursos Aprimorados
+- **Gerador Dinâmico de Saudações**: Milhares de combinações possíveis
+- **Trivia com Dificuldade Adaptativa**: Questões ajustadas ao seu nível
+- **Sistema de Respostas Contextuais**: O bot responde de forma mais natural
+- **Easter Eggs**: Descubra comandos e respostas secretas
+- **Conversão de Usuários**: Tente converter outros ao caminho de Nurgle
 
-- 🤖 Custom Commands: Add your own commands to extend the bot's functionality.
+### 🛡️ Melhorias Técnicas
+- **Logging Completo**: Sistema de logs para debug
+- **Persistência de Dados**: Suas infecções são salvas
+- **Configuração por Variáveis de Ambiente**: Mais seguro
+- **Tratamento de Erros**: Bot mais estável e resiliente
 
-## Prerequisites
+## 📋 Pré-requisitos
 
-Before you can run this bot, ensure that you have the following gems installed:
+- Ruby 3.0 ou superior
+- Bundler gem
+- Token de bot do Telegram (obtenha com @BotFather)
 
-- [telegram-bot-ruby](https://rubygems.org/gems/telegram-bot-ruby) (version 1.0 or higher)
-- [json](https://rubygems.org/gems/json)
-- [net-http-persistent](https://rubygems.org/gems/net-http-persistent) (version 2.9.4 or higher)
+## 🚀 Instalação
 
-You can install these gems using the following commands:
-
+### 1. Clone o repositório
 ```bash
-gem install telegram-bot-ruby -v '1.0'
-gem install json
-gem install net-http-persistent -v '2.9.4'
+git clone https://github.com/yourusername/papa-nurgle-bot-v2.git
+cd papa-nurgle-bot-v2
 ```
 
-## Installation
-
-1. Clone this repository to your local machine:
-
+### 2. Instale as dependências
 ```bash
-git clone https://github.com/yourusername/papa-nurgle-bot.git
+bundle install
 ```
 
-2. Navigate to the project folder:
-
+### 3. Configure o token do bot
 ```bash
-cd papa-nurgle-bot
+# Linux/Mac
+export NURGLE_BOT_TOKEN='seu_token_aqui'
+
+# Windows
+set NURGLE_BOT_TOKEN=seu_token_aqui
 ```
 
-3. Start the bot by running the main script:
+### 4. (Opcional) Configure seu ID de admin
+```bash
+export ADMIN_TELEGRAM_ID='seu_user_id'
+```
 
+### 5. Execute o bot
 ```bash
 ruby bin/main.rb
+
+# Ou torne executável
+chmod +x bin/main.rb
+./bin/main.rb
 ```
 
-The bot should now be up and running, ready to infect your Telegram chats with Nurgle's blessings!
+## 📱 Comandos Disponíveis
 
-## Usage
+### Comandos Básicos
+| Comando | Descrição |
+|---------|-----------|
+| `/start` | Inicia o bot e registra o usuário |
+| `/stop` | Para o bot (infecções são mantidas) |
+| `/help` | Lista todos os comandos disponíveis |
 
-1. Start a chat with your bot on Telegram.
-2. Use the available commands to interact with the bot and enjoy Nurgle-themed content.
+### Comandos de Interação
+| Comando | Descrição |
+|---------|-----------|
+| `/greet` | Recebe uma saudação pestilenta única |
+| `/trivia` | Aprenda fatos sobre Nurgle (dificuldade adaptativa) |
+| `/blessing` | Receba sua bênção diária especial |
+| `/plague` | Descubra sua praga pessoal |
+| `/garden` | Visite o Jardim de Nurgle |
 
-## Commands
+### Comandos de Status
+| Comando | Descrição |
+|---------|-----------|
+| `/infection` | Veja seu nível de infecção e progresso |
+| `/devotion` | Cheque seu nível de devoção |
 
-Here are some example commands to get you started:
+### Comandos Especiais
+| Comando | Descrição |
+|---------|-----------|
+| `/convert` | Responda a alguém para tentar convertê-lo |
+| `/stats` | (Admin) Veja estatísticas do bot |
 
-- `/greet`: Receive a Nurgle-inspired greeting.
-- `/trivia`: Get interesting Nurgle trivia.
-- `/help`: See a list of available commands.
+### 🥚 Easter Eggs
+- Digite "7" para uma surpresa
+- Mencione outros deuses do Caos
+- Mencione "Papa Nurgle" ou "Vovô"
 
-Feel free to extend the bot's functionality by adding your own custom commands. You can find more information in the code.
+## 📊 Sistema de Níveis
 
-## Contribute
+| Nível | Nome | Infecção Necessária |
+|-------|------|---------------------|
+| 1 | Não Infectado | 0 |
+| 2 | Recém Tocado | 10 |
+| 3 | Esporo Inicial | 25 |
+| 4 | Portador Menor | 50 |
+| 5 | Hospedeiro Ativo | 100 |
+| 6 | Vetor Pestilento | 175 |
+| 7 | Praga Ambulante | 275 |
+| 8 | Arauto da Decadência | 400 |
+| 9 | Campeão Pútrido | 550 |
+| 10 | Escolhido de Nurgle | 750 |
+| 11 | Avatar da Pestilência | 1000 |
+| 12 | Daemon Menor | 1500 |
+| 13 | Príncipe Daemon | 2000 |
+| 14 | Favorito de Papa Nurgle | 3000 |
+| 15 | Encarnação da Entropia | 5000 |
 
-We welcome contributions to make this Nurgle-themed Telegram Bot even more infectious. If you have ideas, improvements, or bug fixes, please submit a pull request.
+## 🗂️ Estrutura do Projeto
 
-## Disclaimer
+```
+papa-nurgle-bot-v2/
+├── bin/
+│   └── main.rb              # Arquivo principal
+├── lib/
+│   ├── bot.rb               # Classe principal do bot
+│   ├── config.rb            # Configurações
+│   ├── greeting_generator.rb # Gerador de saudações
+│   ├── infection_system.rb  # Sistema de gamificação
+│   ├── nurgle_responses.rb  # Respostas contextuais
+│   └── trivia_manager.rb    # Gerenciador de trivia
+├── data/                     # Dados persistentes
+│   └── infections.json      # Dados dos usuários
+├── logs/                     # Logs do sistema
+│   └── bot.log              # Log principal
+├── Gemfile                   # Dependências Ruby
+├── Gemfile.lock             # Versões fixadas
+└── README.md                # Este arquivo
+```
 
-This project is fan-made and not affiliated with Games Workshop or the Warhammer 40k universe in any official capacity. It's purely for entertainment and educational purposes.
+## 🔧 Configuração Avançada
 
-## License
+### Variáveis de Ambiente
 
-This project is licensed under the [MIT License](LICENSE).
+```bash
+# Token do bot (obrigatório)
+NURGLE_BOT_TOKEN=seu_token_aqui
 
-## Contact
+# ID do administrador (opcional)
+ADMIN_TELEGRAM_ID=123456789
 
-If you have any questions or suggestions, feel free to contact the bot creator at `rahal.aires@gmail.com`.
+# Nível de log (opcional: DEBUG, INFO, WARN, ERROR)
+LOG_LEVEL=INFO
 
-Enjoy your Nurgle-themed Telegram Bot! 🤢💀
+# Para webhook (opcional)
+WEBHOOK_URL=https://seu-dominio.com/webhook
+PORT=8443
+```
+
+### Personalização
+
+Você pode personalizar o bot editando os seguintes arquivos:
+
+- `lib/config.rb`: Ajustar configurações gerais
+- `lib/greeting_generator.rb`: Adicionar novos templates de saudação
+- `lib/nurgle_responses.rb`: Adicionar novas respostas
+- `lib/trivia_manager.rb`: Adicionar mais trivias
+
+## 🐛 Troubleshooting
+
+### Bot não conecta
+- Verifique se o token está correto
+- Confirme conexão com internet
+- Verifique se o token não foi revogado
+
+### Comandos não funcionam
+- Certifique-se de que os arquivos estão na estrutura correta
+- Verifique os logs em `logs/bot.log`
+- Execute `bundle install` novamente
+
+### Dados não são salvos
+- Verifique permissões na pasta `data/`
+- Certifique-se de que o diretório existe
+
+## 🤝 Contribuindo
+
+Contribuições são bem-vindas! Para contribuir:
+
+1. Fork o projeto
+2. Crie sua feature branch (`git checkout -b feature/NovaFeature`)
+3. Commit suas mudanças (`git commit -m 'Add: Nova feature'`)
+4. Push para a branch (`git push origin feature/NovaFeature`)
+5. Abra um Pull Request
+
+## 📈 Roadmap
+
+- [ ] Sistema de batalhas entre usuários
+- [ ] Integração com banco de dados
+- [ ] Modo campanha com missões
+- [ ] Sistema de itens e equipamentos
+- [ ] Integração com API do Warhammer
+- [ ] Suporte multi-idioma
+- [ ] Dashboard web para estatísticas
+
+## ⚖️ Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## ⚠️ Disclaimer
+
+Este é um projeto fan-made não afiliado com Games Workshop ou o universo Warhammer 40k. Criado apenas para fins educacionais e de entretenimento.
+
+## 📞 Contato
+
+**Desenvolvedor**: Tiago Rahal Aires  
+**Email**: rahal.aires@gmail.com  
+**GitHub**: [@tiagorahal](https://github.com/tiagorahal)
+
+---
+
+<div align="center">
+  
+**🦠 Que as bênçãos de Papa Nurgle estejam com você! 🦠**
+
+*"Na decadência, encontramos a verdade. Na pestilência, a salvação."*
+
+</div>
